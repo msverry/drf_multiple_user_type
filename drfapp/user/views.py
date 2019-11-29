@@ -13,12 +13,12 @@ from user.models import (
 
 class IsCustomer(BasePermission):
     def has_permission(self, request, view):
-        return request.user.is_customer or request.user.is_staff
+        return request.user.is_customer
 
 
 class IsEmployee(BasePermission):
     def has_permission(self, request, view):
-        return request.user.is_employee or request.user.is_staff
+        return request.user.is_employee
 
 
 class CustomerInfo(APIView):
